@@ -1,0 +1,28 @@
+<% content_for :title do -%>
+  <%= t('site.music_download') %>
+<% end -%>
+
+<div class="grid_8" style="text-align: center;">
+	<ul class="nobullet">
+		<li><%= link_to "Qué que cê qué?", :action => "baixar", :track => "1", :target => "_blank" %></li>
+		<li><%= link_to "Vestidim", :action => "baixar", :track => "2" %></li>
+		<li><%= link_to "Não tenho culpa que você não sabe sambar", :action => "baixar", :track => "3" %></li>
+		<li><%= link_to "Meu Querido Santo Antônio", :action => "baixar", :track => "4" %></li>
+		<li><%= link_to "Cantiga Antiga", :action => "baixar", :track => "5" %></li>
+		<li><%= link_to "Outros Tempos", :action => "baixar", :track => "6" %></li>
+		<li><%= link_to "Mais um Conselho", :action => "baixar", :track => "7" %></li>
+		<li><%= link_to "Canção do Colo", :action => "baixar", :track => "8" %></li>
+		<li><%= link_to "Caradum Cara do Outro", :action => "baixar", :track => "9" %></li>
+		<li><%= link_to "Somos Todos Irmãos", :action => "baixar", :track => "10" %></li>
+	</ul>
+	<br><br>
+	<p><%= session[:visitor]["name"] %>, <%= t('site.download_text1') %></p>
+	<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+	<input type="hidden" name="cmd" value="_s-xclick">
+	<input type="hidden" name="hosted_button_id" value="PL7CD49ZHMPWE">
+	<button class="awesome red large"><%= t("site.donate") %></button>
+
+	</form>
+	<p><%= t('site.download_text2') %></p>
+	<p><a class="awesome red large" href="<%= t('site.buy_link') %>"><%= t("site.buy_text") %></a></p>
+</div>

@@ -1,0 +1,24 @@
+<% content_for :title do -%>
+<%= t("site.shows") %>
+<% end -%>
+
+  <% if !@list.blank? %>
+    <% for item in @list %>
+      <h2 class="grid_8 last"><%= dt(item['start']['date']) %> - <%= item['start']['time'][0..4] %> - <%= item['venue']['metroArea']['displayName'] %></h2>
+      <h3 class="grid_4"><%= item['venue']['displayName'] %></h3>
+      <h3 class="grid_4"><%= item['venue']['street'] %></h3>
+    <% end %>
+  <% else %>
+    
+  <% end %>
+</ul>
+
+<!-- <div class="grid_8 last">
+<a href="http://www.songkick.com/artists/3845881" class="songkick-widget" data-theme="light" data-detect-style="true" data-font-color="#ffffff" data-background-color="transparent"><%= t("site.shows") %></a>
+<script src="//widget.songkick.com/widget.js"></script>
+</div>
+ -->
+
+<div class="grid_2">
+ <a href="https://www.songkick.com/artists/3845881-daniella-alcarpe">Songkick</a>  
+</div>

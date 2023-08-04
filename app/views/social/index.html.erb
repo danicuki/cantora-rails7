@@ -1,0 +1,31 @@
+<% content_for :title do -%>
+<%= t("site.social") %>
+<% end -%>
+<div class="grid_2">
+	<br>
+	<a href="http://www.facebook.com/pages/Daniella-Alcarpe/173543722041" target="_blank"><%= image_tag "facebook.png", :border => "0" %></a><br><br>
+	<a href="http://www.youtube.com/daniellaalcarpe" target="_blank"><%= image_tag "youtube.png", :border => "0" %></a><br><br>
+  <a href="https://plus.google.com/108150278899003753919" target="_blank"><%= image_tag "google-plus-icon.png", :border => "0" %></a><br><br>
+	<a href="http://www.orkut.com.br/Main#Community?cmm=1521785" target="_blank"><%= image_tag "orkut.png", :border => "0" %></a><br><br>
+	<a href="http://www.myspace.com/daniellaalcarpe" target="_blank"><%= image_tag "myspace.png", :border => "0" %></a><br><br>
+
+
+
+</div>
+<div class="grid_3">
+	<a href="http://www.twitter.com/cantora"><%= image_tag "twitter.png", :border => "0" %></a>
+
+	<% @twits.each do |t| %>
+	<div class="comment_header">
+		<%= t.published.strftime("%d/%m/%Y %H:%M") %>
+	</div>
+	<div class="comment"><a href="<%= t.url %>"><%= t.summary.gsub("cantora: ","") %></a></div>
+	<% end %>
+
+</div>
+
+<div class="grid_3">
+		<div style="background-color: white; width: 400px; padding: 3px">
+		<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:comments href="www.cantora.mus.br" num_posts="7" width="400" colorscheme="light"></fb:comments>
+    </div>
+    </div>

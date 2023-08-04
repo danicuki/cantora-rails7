@@ -1,0 +1,33 @@
+<div class="grid_5 last" style="text-align: center"><br>
+</div>
+<div class="grid_5"><br>
+<center><a href="http://bit.ly/eu-e-ela-links" target="_blank"><img src="https://pbs.twimg.com/media/CxDjidBVEAA8qk1.jpg" width="500" height="500" border="0"></a></center>
+</div>
+<div class="grid_3 last" >
+  <p>
+  	<a class="awesome red large"  href="http://bit.ly/eu-e-ela-links" target="_blank"><%= t("site.music_download") %></a>
+  	  </p>
+      <p><%= raw(t("site.eueela")) %><br><br>
+</div>
+
+<div class="grid_5">
+  <br>
+  <br>
+<iframe width="95%" height="300" src="http://www.youtube.com/embed/<%= @videos[rand * @videos.size]  %>" frameborder="0" allowfullscreen></iframe>
+<br>
+<br>
+<iframe width="95%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Fplaylists%2F282406259&amp;color=ff6600&amp;auto_play=false&amp;show_artwork=true"></iframe>
+</div>
+<div class="grid_3 last">
+  <br>
+	<p><%= raw(t("site.release1")) %></p>
+	<p><%= raw(t("site.release2")) %></p>
+	<p><%= raw(t("site.release3")) %></p>
+	<p><%= raw(t("site.release4")) %></p>
+  <p><%= raw(t("site.release5")) %></p>
+
+</div>
+
+<% content_for :right do -%>
+<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.cantora.mus.br&amp;layout=box_count&amp;show_faces=true&amp;width=450&amp;action=like&amp;font&amp;colorscheme=light&amp;height=80" scrolling="no" frameborder="0" style="float: right; width: 50px;height: 69px;margin-top: 16px;" allowtransparency="false"></iframe>
+<% end -%>

@@ -1,0 +1,13 @@
+<h2><%= t('site.music_download') %></h2>
+<div class="clear">&nbsp;</div>
+  <p><%= t("site.download_instructions") %></p>
+	<% @visitor ||= Visitor.new %>
+	<%= form_for(@visitor) do |f| %>
+	  <p>
+	    <%= f.text_field :name, :onfocus => "if (this.value==this.defaultValue) this.value = ''", :onblur=>"if(this.value=='')this.value=this.defaultValue", :value => "#{t('site.name')}"%>
+	    <%= f.text_field :email, :onfocus => "if (this.value==this.defaultValue) this.value = ''", :onblur=>"if(this.value=='')this.value=this.defaultValue", :value => "Email"%>
+	  </p>
+	  <p>
+	    <%= f.submit "#{t('site.music_download')}", :class => "awesome red large" %>
+	  </p>
+	<% end %>

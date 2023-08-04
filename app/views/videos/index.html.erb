@@ -1,0 +1,18 @@
+<% content_for :title do -%>
+  <%= t("site.video") %>
+<% end -%>
+
+  <script type="module">
+import $ from "jquery"
+document.addEventListener("turbo:load", function() {
+  $(function() {
+    $("ul.demo1").ytplaylist({addThumbs:true, autoPlay:true, playerHeight: 450, playerWidth: 675,allowFullScreen: true
+    });
+    $(".scrollable").scrollable();
+  });
+});
+  </script>
+
+  <div class="grid_8 last" style="text-align: center">
+    <iframe width="840" height="473" src="https://www.youtube.com/embed/videoseries?list=PLE3ABD6472A35CFAF" frameborder="0" allowfullscreen></iframe>
+  </div>

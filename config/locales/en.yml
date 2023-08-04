@@ -1,0 +1,95 @@
+en:
+    site:
+      title: Daniella Alcarpe MPB popular brazilian and latin singer
+      keywords: daniella alcarpe, singer, mpb, brazilian popular music, jazz, latin
+      singer: Singer
+      fans: Fans
+      name: Name
+      music: Discography
+      photo: Photo
+      video: Video
+      social: Social
+      social_title: Social Networks
+      download_instructions: "To get all Daniella's songs for free, all you have to do is fulfil the form below and you will have free access to the whole of each track. But, please, don’t worry: we are not using your data except for sending news about Daniella"
+      download_text1:  And why not help her divulge this CD, by sending her link to your friends? You can also support the recording of her second CD by making a donation of any amount! If you like her work, please choose an amount and donate via this website. All contributions are most welcome.
+      download_text2: You can also give “Qué que cê qué” to a friend! Isn’t it a lovely gift?
+      buy_text: Click here to buy the CD
+      buy_link: https://www.amazon.com/s?i=popular&rh=p_32%3ADANIELLA+ALCARPE+%28&ref=dp_byline_sr_music_1
+      donate: Donate
+      shows: Shows
+      news: News
+      follow: Social networks
+      music_download:  Listen Now!
+      download_cd: Download all songs from my first CD for FREE
+      contact: Contact
+      release1: A delightful Brazilian singer brings to you the very best of nowadays music made in Brazil! Find out the <a href="/agenda">when she will give the next Show</a>, by liking her <a href="http://www.facebook.com/daniella.alcarpe">Facebook's fan page'</a> or <a href="http://www.twitter.com/cantora">following Daniella on twitter</a>!
+      release2: Daniella Alcarpe is such a good Brazilian singer that she wouldn’t need to be so beautiful, but she is. Her wonderful voice and swing bring to you, in this CD, <a href="http://www.mpb.com">true Brazilian music</a>, played in a very fresh way by mixing typical instruments like bandolim, cavaquinho e cuíca to guitars, sax, flute and keyboard. All songs arranged by João Marcondes and played by talented and experienced musicians. Why tell more?
+      release3: "Enjoy it. New, full of melody and rhythm, there is a piece of Brazil in each track. You will be carried to the sunny side of life: a kind of warmness that the heart understands with a smile."
+      release4: ""
+      release5: ""
+      cd1:  Daniella Alcarpe  presents her first CD, “<a href="http://www.amazon.com/Qu%C3%A9-Que-C%C3%AA/dp/B002PBWCZI">Qué que cê qué?</a>” made out of the heart.  It is a work full of passion, sweetness and swing, where you will find true Brazilian rhythms, like samba, choro, frevo and baião.
+      cd2: On this Cd, you will find not only the music of well-known and respected composers, like Carlos Careqa and <a href="http://www.myspace.com/zederiba">Zé de Riba</a>, but also the music of composers fresh to the Brazilian market. This is part of a work that is very dear to Daniella, find out new good Brazilian music and spread it all around the world!
+      cd3: That’s why you can download every music of her CD for free! Enjoy it!
+      cd4: ""
+      ringtone: If you have an iPhone, you download an exclusive <a href="/ringtone.m4r">ringtone by clicking here<strong>aqui</strong></a> and listen to Vestidim song every time your phone rings.
+      otemposalta: The time that jumps is inside. Suddenly, at a given moment, we understand life, this mystery, that place between mind and heart that only time knows. And we thank all who lived and lives with more tolerance, more love, more compassion. <br><br> This CD brings together songs that somehow reflect the times in which we pass through. Times of pain, of doubt, of little understanding. And time for love, contemplation, serenity. Beautiful times, times of gratitude.
+      dinda1: "In one of these meetings of destination, Daniella Alcarpe met ''Dinda'', a beautiful song by Joel Daniels, and stumbled defend it in Botucanto, a famous Brazilian Music Festival in Botucatu. Sure enough, the very first place!<br><br>This is the single ''Dinda'', a first sample of this musical union which is more than a meeting of generations: it is well made music, music that respects our traditions and culture, music that is pure beauty and pure sweetness. This single is a preview of the album which is a partnership between Joel and Daniella."
+      dinda2: "Joel Damasceno road in Brazilian popular music. Guitarist, singer and songwriter, at age 18 attended the famous John Sebastian Bar, Rua Major Sertório, São Paulo, as a musician, showing his compositions to the public and to the select group of musicians who attended there. Were 60!<br><br>Time passed, and composer compositions were growing and maturing. Life took Joel to the interior of São Paulo and the minstrel stage changed: from bars to festivals, at the exact moment that the MPB Festivals brought to the public talents born of a fantastic cultural effervescence, maybe even more of the phases rich Brazilian music. The result of Joel's participation was a success after another. From 1972 to 1986, the interior of São Paulo knew what it already knew. Joel Damasceno was a talented composer and proof came with the awards that followed their presentations.<br><br>What this composer, so celebrated in the 70 and 80 walked creating these last 25 years?<br><br>This is what Daniella Alcarpe was willing to find out. Because her passion is Brazilian popular music and one of her goals as an artist is to reveal, through her excellent interpretation and vocal talent, poetic and musical gems still unknown to the general public."
+      eueela: "More than a gathering of generations, this album offers the public the record of the fruitful and constant work of a composer who dedicated his entire life to the construction of a work that respects and beautifies our music. This work is performed masterfully by a singer of the highest quality. Idealized and based on mutual affection and respect, this album brings pure beauty from the voice of Daniella Alcarpe, pure beauty in the music and poetry of Joel Damasceno. A true declaration of love for Brazilian popular music."
+      songs: Songs
+      rights: Daniella Alcarpe © 2015 - All Rights Reserved
+    date:
+       formats:
+         # Use the strftime parameters for formats.
+         # When no format has been given, it uses default.
+         # You can provide other formats here if you like!
+         default: "%d-%m-%Y"
+         short: "%b %d"
+         long: "%B %d, %Y"
+
+       day_names: [Doming, Segunda, Terça, Quarta, Quinta, Sexta, Sábado]
+       abbr_day_names: [Dom, Seg, Ter, Qua, Qui, Sex, Sab]
+
+       # Don't forget the nil at the beginning; there's no such thing as a 0th month
+       month_names: [~, Janeiro, Fevereiro, Março, Abril, Maio, Junho, Julho, Agosto, Setembro, Outubro, Novembro, Dezembro]
+       abbr_month_names: [~, Jan, Fev, Mar, Abr, Mai, Jun, Jul, Ago, Set, Out, Nov, Dez]
+       # Used in date_select and datime_select.
+    hello: "oi"
+    obrigatorio: "não pode ser branco"
+    errors: "Erro!"
+    activerecord:
+        models:
+            visitor: "Usuário"
+        attributes:
+        errors:
+            template:
+                body: "Por favor, corrija os campos assinalados"
+                header: "Dados inválidos"
+            messages:
+                blank: "é um campo obrigatório"
+                taken: "já existe"
+                too_short: "está incompleto"
+                invalid: "não é válido"
+
+    number:
+        format:
+            separator: ","
+            delimiter: "."
+            precision: 2
+        currency:
+            format:
+                format: "%u %n"
+                unit: "R$"
+                separator: ","
+                delimiter: "."
+                precision: 2
+        percentage:
+            format:
+                delimiter: '.'
+        precision:
+            format:
+                delimiter: '.'
+        human:
+            format:
+                precision: 1
+                delimiter: '.'

@@ -1,0 +1,21 @@
+<% content_for :title do -%>
+<%= t('site.music_download') %>
+<% end -%>
+<div class="grid_8" style="text-align: justify;">
+  <%= t("site.download_instructions") %>
+	<br><br>
+	<% form_for(@visitor) do |f| %>
+	  <p>
+	    <%= f.label :name, "#{t('site.name')}" %><br />
+	    <%= f.text_field :name %>
+	  </p>
+	  <p>
+	    <%= f.label :email %><br />
+	    <%= f.text_field :email %>
+	  </p>
+	  <p>
+	    <%= f.submit "#{t('site.music_download')}", :class => "awesome red large" %>
+	  </p>
+	<% end %>
+
+</div>

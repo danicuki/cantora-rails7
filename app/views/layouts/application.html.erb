@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title><%= t("site.title") %> <%= yield(:title) ? "-" : ""%> <%= yield(:title) %></title>
+	<link rel="shortcut icon" href="/images/boneca.png" type="image/png">
+	<META NAME="TITLE" CONTENT="<%= t("site.title") %> <%= yield(:title) ? "-" : ""%> <%= yield(:title) %>" />
+	<META NAME="KEYWORDS" CONTENT="<%= t("site.keywords") %>, <%= yield(:title).downcase if yield(:title)  %>" />
+  <meta name="viewport" content="width=1010" />
+	<META NAME="DESCRIPTION" CONTENT="<%= t("site.title") %> <%= yield(:title) ? "-" : ""%> <%= yield(:title) %>" />
+	<%= javascript_importmap_tags %>
+	<%= stylesheet_link_tag "application", media: :all %>
+
+</head>
+<body>
+  <nav class="">
+    <div class="top">
+      <ul class="top-menu grid_8 last">
+    		<li class="menu">
+    			<%= link_to image_tag("home.png", :border => 0), "/" %>
+    		</li>
+				<li class="menu <%= isSelected?(t('site.music'), yield(:title)) %>"><%= link_to "#{t('site.music')}", {:controller => "musicas", action: "index"}, :title => "#{t('site.music')}" %>  </li>
+				<li class="menu <%= isSelected?(t('site.video'), yield(:title)) %>"><%= link_to "#{t('site.video')}", {:controller => "videos"}, :title => "#{t('site.video')}" %>    </li>
+				<li class="menu <%= isSelected?(t('site.shows'), yield(:title)) %>"><%= link_to "#{t('site.shows')}", {:controller => "agenda"}, :title => "#{t('site.shows')}"  %>    </li>
+				<li class="menu <%= isSelected?(t('site.news'), yield(:title)) %>"><%= link_to "#{t('site.news')}", {:controller => "novidades"}, :title => "#{t('site.news')}" %></li>
+			</ul>
+			<div class="languages">
+			  <%= link_to image_tag("usa.png", :border => 0), "?locale=en" %>
+			  <%= link_to  image_tag("bra.png", :border => 0), "?locale=pt-BR" %>
+			  <%= link_to  image_tag("france.png", :border => 0), "?locale=fr" %>
+			</div>
+		</div>
+  </nav>
+	<div class="top1">
+  </div>
+	<div class="top2">
+  </div>
+
+  <div class="container container_8">
+    <div class="header">
+    <div class="grid_4">
+			<%= link_to image_tag("logo2.png", :border => 0), "/" %>
+    </div>
+    <div class="grid_4 last">
+      <h1><%= yield :title %></h1>
+      <%= yield :right %>
+    </div>
+  </div>
+
+		<%= yield %>
+
+		<div class="clear">
+			&nbsp;
+		</div>
+	</div>
+	<div class="predios">
+    &nbsp;
+	</div>
+	<div class="footer">
+	  <div class="container_8">
+
+		<div class="grid_6">
+      <ul class="footer-menu">
+				<li class="menu <%= isSelected?(t('site.music'), yield(:title)) %>"><%= link_to "#{t('site.music')}", {:controller => "musicas"}, :title => "#{t('site.music')}" %>  </li>
+				<!-- <li class="menu <%= isSelected?(t('site.photo'), yield(:title)) %>"><%= link_to "#{t('site.photo')}", {:controller => "fotos"}, :title => "#{t('site.photo')}" %>      </li> -->
+				<li class="menu <%= isSelected?(t('site.video'), yield(:title)) %>"><%= link_to "#{t('site.video')}", {:controller => "videos"}, :title => "#{t('site.video')}" %>    </li>
+				<li class="menu <%= isSelected?(t('site.shows'), yield(:title)) %>"><%= link_to "#{t('site.shows')}", {:controller => "agenda"}, :title => "#{t('site.shows')}"  %>    </li> 
+				<li class="menu <%= isSelected?(t('site.news'), yield(:title)) %>"><%= link_to "#{t('site.news')}", {:controller => "novidades"}, :title => "#{t('site.news')}" %></li>
+			</ul>
+
+		  <div class="social-bar">
+		    <span><%= t('site.follow') %></span>
+		    <a href="http://www.facebook.com/daniella.alcarpe" target="_blank"><%= icon "facebook.png" %></a>
+      	<a href="http://www.youtube.com/daniellaalcarpe" target="_blank"><%= icon "youtube.png" %></a>
+		    <a href="http://www.twitter.com/cantora" target="_blank"><%= icon "twitter.png" %></a>
+      	<a href="http://instagram.com/daniellaalcarpe" target="_blank"><%= icon "instagram.png" %></a>
+      </div>
+		</div>
+		<div class="grid_2 last">
+		  &nbsp;
+    </div>
+    <div class="grid_8 last">
+      <hr>
+      <p class="copy"><%= t('site.rights')%></p>
+    </div>
+
+	</div>
+</div>
+
+
+	<% if Rails.env != "development" %>
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-474621-6']);
+    _gaq.push(['_setSiteSpeedSampleRate', 100]);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+	<% end %>
+	</body>
+</html>
